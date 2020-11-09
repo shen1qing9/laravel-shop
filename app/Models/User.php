@@ -5,10 +5,12 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
+use Encore\Admin\Traits\DefaultDatetimeFormat;
 // 这里加上 MustVerifyEmail
 class User extends Authenticatable implements MustVerifyEmail
 {
+  // 加上这个 Trait
+  use DefaultDatetimeFormat;
     use Notifiable;
 
     /**
