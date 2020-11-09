@@ -9,5 +9,5 @@ class PagesController extends Controller
     public function root()
     {
         return view('pages.root');
-    }
+    }   
 }
